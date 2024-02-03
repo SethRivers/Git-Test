@@ -2,7 +2,7 @@
  * @file main.cpp
  * @author Seth Rivers
  * @date 2024-02-01
- * @brief this branch is dedicated to redoing questions 1 and 5
+ * @brief this branch is dedicated to redoing questions 1, 2, 3 and 5
  * 
  * 
  */
@@ -81,12 +81,10 @@ int main() {
 void populate(int array[], int length){
   ifstream file;
   file.open("integar.txt");
-
-  int i = 0;
-  file>>array[i];
-  while (file>>array[i]&&i<length){
-    i++;
+  for (int i = 0; i < length; i++){
+    file >> array[i];
   }
+  
   file.close();
 }
 
